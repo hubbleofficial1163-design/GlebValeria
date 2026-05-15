@@ -1151,6 +1151,336 @@ textarea:focus,
 select:focus {
     outline: none;
 }
+
+/* ===== ПОЛНОСТЬЮ БЕЖЕВО-СЕРАЯ ГАММА ===== */
+
+/* Основные акцентные цвета */
+:root {
+    --beige: #d4c5b0;
+    --beige-dark: #b8a68c;
+    --beige-light: #e8dfd3;
+    --gray-soft: #8a8a8a;
+    --gray-light: #b0b0b0;
+    --gray-bg: #f5f3f0;
+    --white-soft: #fefcf9;
+}
+
+/* Герой секция - затемнение для читаемости */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('1.JPG') no-repeat center center/cover;
+}
+
+.hero-content h1,
+.hero-content .names,
+.hero-content .date,
+.hero-content p {
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    color: #fff;
+}
+
+/* Календарь - бежевые акценты */
+.calendar-container {
+    background: var(--white-soft);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+}
+
+.calendar-nav {
+    color: var(--beige-dark) !important;
+    font-size: 1.8rem;
+}
+
+.calendar-nav:hover {
+    background: rgba(184, 166, 140, 0.15) !important;
+    color: var(--beige-dark) !important;
+}
+
+.calendar-month-year {
+    color: #6a6a6a !important;
+    font-weight: 500;
+}
+
+.calendar-weekday {
+    color: #999 !important;
+}
+
+.calendar-day {
+    color: #5a5a5a;
+}
+
+.calendar-day.wedding-day {
+    background: var(--beige) !important;
+    color: #4a4a4a !important;
+    font-weight: 600;
+    box-shadow: 0 3px 12px rgba(212, 197, 176, 0.5) !important;
+}
+
+.calendar-day:hover:not(.wedding-day) {
+    background: rgba(212, 197, 176, 0.25) !important;
+}
+
+.wedding-date {
+    color: var(--beige-dark) !important;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.wedding-text {
+    color: #888;
+}
+
+/* Таймер */
+.countdown {
+    background: #3a3a3a;
+}
+
+.countdown h2 {
+    color: #eee;
+}
+
+.countdown-item {
+    background: rgba(255,255,255,0.08);
+}
+
+.countdown-number {
+    color: var(--beige) !important;
+    font-weight: 400;
+}
+
+.countdown-label {
+    color: #ccc;
+}
+
+/* Секция локации */
+.location-section {
+    background: linear-gradient(135deg, #efebe5 0%, #e5dfd7 100%);
+}
+
+.location-section h2 {
+    color: #5a5a5a;
+}
+
+.location-card {
+    background: var(--white-soft);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.location-content h2 {
+    color: #5a5a5a !important;
+}
+
+.location-content p {
+    color: #777;
+}
+
+.location-icon {
+    color: var(--beige-dark) !important;
+}
+
+.location-divider {
+    background: var(--beige) !important;
+    width: 80px;
+    height: 2px;
+}
+
+.location-note {
+    color: #999;
+}
+
+/* Детали мероприятия */
+.details {
+    background: linear-gradient(135deg, #faf8f5 0%, #f2efe9 100%);
+}
+
+.details h2 {
+    color: #5a5a5a;
+}
+
+.detail-card {
+    background: var(--white-soft);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+}
+
+.detail-card h3 {
+    color: var(--beige-dark) !important;
+    font-size: 1.8rem;
+}
+
+.detail-card p {
+    color: #888;
+}
+
+/* Цветовые кружки - делаем их бежевыми/серыми */
+.color-circle[style*="background: #8B5E3C"] {
+    background: #b8a68c !important;
+}
+.color-circle[style*="background: #b5c4a1"] {
+    background: #c4bcac !important;
+}
+.color-circle[style*="background: #b8d4e3"] {
+    background: #c8cfc8 !important;
+}
+.color-circle[style*="background: #f5e6d3"] {
+    background: #e8dfd3 !important;
+}
+.color-circle[style*="background: #fff4d9"] {
+    background: #f5eddf !important;
+}
+.color-circle {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+/* Секция пожеланий */
+.wedding-wishes {
+    background: linear-gradient(135deg, #f5f2ed 0%, #ece6de 100%);
+}
+
+.wedding-wishes h2 {
+    color: #5a5a5a;
+}
+
+.wedding-wishes h2::after {
+    background: linear-gradient(90deg, transparent, var(--beige), var(--beige), var(--beige), transparent) !important;
+}
+
+.wishes-card {
+    background: rgba(255, 253, 250, 0.95) !important;
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(212, 197, 176, 0.4) !important;
+    box-shadow: 0 40px 70px rgba(0,0,0,0.08), 0 10px 30px rgba(0, 0, 0, 0.05) !important;
+}
+
+.wishes-card:hover {
+    box-shadow: 0 50px 80px rgba(0,0,0,0.1) !important;
+}
+
+.heart-decoration {
+    opacity: 0.4;
+    color: var(--beige-dark);
+}
+
+.wishes-greeting {
+    color: var(--beige-dark) !important;
+    font-size: 2rem;
+}
+
+.wishes-text {
+    color: #6a6a6a !important;
+}
+
+.wish-item {
+    background: linear-gradient(135deg, #fffbf7 0%, #fef7ef 100%) !important;
+    border-left-color: var(--beige) !important;
+}
+
+.wish-item:hover {
+    background: linear-gradient(135deg, #fef5ea 0%, #fdecdb 100%) !important;
+    transform: translateX(8px);
+}
+
+.wish-title {
+    color: var(--beige-dark) !important;
+}
+
+.wish-description {
+    color: #888;
+}
+
+.wishes-footer {
+    border-top-color: var(--beige-light) !important;
+}
+
+.wishes-footer::before {
+    color: var(--beige) !important;
+    background: #fffbf7 !important;
+}
+
+.wishes-final {
+    color: #777;
+    background: rgba(212, 197, 176, 0.1);
+}
+
+.signature span {
+    color: #999;
+}
+
+.signature strong {
+    color: var(--beige-dark) !important;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.05) !important;
+}
+
+.ring-decoration {
+    opacity: 0.3 !important;
+    color: var(--beige);
+}
+
+/* RSVP форма */
+.rsvp {
+    background: #3a3a3a;
+}
+
+.rsvp h2 {
+    color: #eee;
+}
+
+.rsvp p {
+    color: #ccc;
+}
+
+.rsvp-form .form-group label {
+    color: #ddd;
+}
+
+.rsvp-form .form-group input,
+.rsvp-form .form-group select,
+.rsvp-form .form-group textarea {
+    background: rgba(255,255,255,0.12);
+    border-color: #666;
+    color: #fff;
+}
+
+.rsvp-form .form-group input:focus,
+.rsvp-form .form-group select:focus,
+.rsvp-form .form-group textarea:focus {
+    border-color: var(--beige) !important;
+    background: rgba(255,255,255,0.18);
+}
+
+.rsvp-form .form-group input::placeholder,
+.rsvp-form .form-group textarea::placeholder {
+    color: #aaa;
+}
+
+.btn {
+    background: var(--beige) !important;
+    color: #4a4a4a !important;
+    font-weight: 500;
+}
+
+.btn:hover {
+    background: var(--beige-dark) !important;
+    color: white !important;
+    transform: translateY(-2px);
+}
+
+/* Футер */
+footer {
+    background: #2a2a2a;
+}
+
+/* Общие текстовые элементы */
+h1, h2, h3 {
+    color: #5a5a5a;
+}
+
+.container p {
+    color: #7a7a7a;
+}
+
+/* Стили для выделения дат */
+.wedding-date {
+    color: var(--beige-dark) !important;
+}
+
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
