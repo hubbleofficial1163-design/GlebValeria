@@ -1481,6 +1481,64 @@ h1, h2, h3 {
     color: var(--beige-dark) !important;
 }
 
+
+/* Стили для палитры цветов */
+.color-palette {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+/* Для девушек — 3 цвета в строку, без больших отступов */
+.palette-girls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    max-width: 180px;  /* 3 кружка по ~50px + 2 отступа по 12px = ~174px */
+    margin: 15px auto 0;
+}
+
+/* Для мужчин */
+.palette-men {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    max-width: 240px;
+    margin: 0 auto;
+}
+
+.color-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.color-circle:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 480px) {
+    .color-circle {
+        width: 42px;
+        height: 42px;
+    }
+    .palette-girls {
+        max-width: 150px;  /* 3 × 42px + 2 × 12px = 150px */
+        gap: 10px;
+    }
+    .palette-men {
+        gap: 10px;
+    }
+}
+
+
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
@@ -1579,22 +1637,27 @@ h1, h2, h3 {
                     <p>Банкет - Ресторан "Шинок Первач"</p>
                     <!-- <p>16:00</p> -->
                 </div>
-                <div class="detail-card">
-                    <h3>Дресс-код</h3>
-                    <p>Будем рады спокойным, сдержанным оттенкам </p>
-                    <p>Рекомендуемые цвета:</p>
-                    <div class="color-palette">
-                        
-                        <div class="color-circle" style="background: #8B5E3C;" title="Шоколадный"></div>
-                        <div class="color-circle" style="background: #b5c4a1;" title="Оливковый"></div>
-                        <div class="color-circle" style="background: #b8d4e3;" title="Небесно-голубой"></div>
-                        <div class="color-circle" style="background: #f5e6d3;" title="Бежевый"></div>
-                        <div class="color-circle" style="background: #fff4d9;" title="Сливочное масло"></div>
-                    </div>
-                    <!-- <div class="dresscode-palette">
-                        <img src="44.png" alt="Палитра цветов" class="dresscode-image">
-                    </div> -->
-                </div>
+<div class="detail-card">
+    <h3>Дресс-код</h3>
+    <p>Будем рады спокойным, сдержанным оттенкам</p>
+    <p>Рекомендуемые цвета для девушек:</p>
+    <div class="color-palette palette-girls">
+        <div class="color-circle" style="background: #e2d9ca;" title="Шоколадный"></div>
+        <div class="color-circle" style="background: #a09f83;" title="Оливковый"></div>
+        <div class="color-circle" style="background: #ccacaf;" title="Небесно-голубой"></div>
+        <div class="color-circle" style="background: #966569;" title="Бежевый"></div> 
+        <div class="color-circle" style="background: #5b0c22;" title="Сливочное масло"></div>
+        <div class="color-circle" style="background: #4d2c1b;" title="Сливочное масло"></div>
+    </div>
+
+    <p><br>Для мужчин белый верх (рубашка поло) и низ представленных оттенков:</p>
+    <div class="color-palette palette-men">
+        <div class="color-circle" style="background: #e6d5c3;" title="Шоколадный"></div>
+        <div class="color-circle" style="background: #ba9e88;" title="Оливковый"></div>
+        <div class="color-circle" style="background: #694932;" title="Небесно-голубой"></div>
+        <div class="color-circle" style="background: #0c100f;" title="Бежевый"></div> 
+    </div>
+</div>
             </div>
         </div>
     </section>
@@ -1678,10 +1741,13 @@ h1, h2, h3 {
                 <div class="form-group">
                     <label for="alcohol">Предпочтения по алкоголю</label>
                     <select id="alcohol" name="alcohol">
-                        <option value="" selected>Не важно</option>
-                        <option value="red_wine">Красное вино</option>
-                        <option value="white_wine">Белое вино</option>
+                        <!-- <option value="" selected>Не важно</option> -->
+                        <option value="red_wine">Красное вино (сухое/полусладкое)</option>
+                        <option value="white_wine">Белое вино (сухое/полусладкое)</option>
                         <option value="champagne">Шампанское</option>
+                        <option value="konyak">Коньяк</option>
+                        <option value="vodka">Водка</option>
+                        <option value="viskey">Виски</option>
                         <option value="non_alcoholic">Безалкогольные напитки</option>
                     </select>
                 </div>
